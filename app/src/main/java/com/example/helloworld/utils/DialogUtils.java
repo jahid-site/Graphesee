@@ -8,6 +8,8 @@
 
 package com.example.helloworld.utils;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 
@@ -28,5 +30,17 @@ public class DialogUtils {
         if (progressDialog != null && progressDialog.isShowing()) {
             progressDialog.dismiss();
         }
+    }
+
+    // Shows a dialog indicating that ads failed to load.
+    public static void showAdsLoadFailedDialog(Activity activity) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        builder.setTitle("Ads Load Failed")
+                .setMessage("Sorry, the ads failed to load. Please try again later.")
+                .setPositiveButton("OK", (dialog, which) -> {
+                    dialog.dismiss();
+                    activity.finish();
+                })
+                .show();
     }
 }
