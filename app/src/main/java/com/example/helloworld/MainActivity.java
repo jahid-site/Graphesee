@@ -3,7 +3,7 @@
  * This activity displays a YouTube video using the AndroidYouTubePlayer library
  * and retrieves video details from the YouTube API.
  *
- * @author Your Name
+ * @author Jahid Hasan
  * @date November 21, 2023
  */
 
